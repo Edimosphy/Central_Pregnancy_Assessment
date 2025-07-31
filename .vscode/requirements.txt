@@ -1,0 +1,14 @@
+flask
+pymysql
+africastalking
+requests
+python-dotenv
+flask_sqlalchemy
+flask_migrate
+gunicorn
+mysql-connector-python
+plotly
+pandas
+scikit-learn
+joblib
+pickle

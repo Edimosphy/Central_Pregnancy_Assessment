@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Pregnancy Risk Assessment</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Risk Assessment Form</h2>
+    <form method="POST" action="/risk_assessment">
+        <input type="text" name="phone" placeholder="Pregnant Woman's Phone" required>
+        <label>Attended:<select name="attended" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select></label><br>
+        <label><input type="number" name="high_bp"> High Blood Pressure</label><br>
+        <label><input type="number" name="BS"> High Blood Sugar</label><br>
+        <label><input type="number" name="other_tests"> Other Clinical Tests</label><br>
+        <label>Weeks Pregnant: <input type="number" name="weeks_pregnant" required></label><br>
+        <label>Trimester: <select name="trimester" required>
+            <option value="first">First</option>
+            <option value="second">Second</option>
+            <option value="third">Third</option>
+        </select></label><br>
+        <label>Gestational Diabetes: <select name="diabetes" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select></label><br>
+        <label>Fetal Movement: <select name="fetal_movement" required>
+            <option value="normal">Normal</option>
+            <option value="decreased">Decreased</option>
+            <option value="absent">Absent</option>
+        </select></label><br>
+        <label>Protein in Urine: <select name="protein_urine" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select></label><br>
+        <label>Heart Rate: <input type="number" name="heart_rate" required></label><br>
+        <label>Body Weight: <input type="number" name="body_weight" required></label><br>
+        <label>Body Temperature: <input type="number" name="body_temp" required></label><br>
+        <label>Systolic BP: <input type="number" name="systolic_bp" required></label><br>
+        <label>Diastolic BP: <input type="number" name="diastolic_bp" required></label><br>
+        <label>Other Clinical Tests: <input type="text" name="other_clinical_tests" required></label><br>
+        <label>Comments: <textarea name="comments" rows="4" cols="50"></textarea></label><br>
+        <button type="submit" class="button">Submit</button>
+    </form>
+</div>
+</body>
+</html>

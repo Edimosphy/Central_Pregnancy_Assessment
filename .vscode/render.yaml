@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: wecare
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: USE_MYSQL
+        value: true
+      - key: MYSQL_HOST
+        value: localhost
+      - key: MYSQL_PORT
+        value: 3306
+      - key: MYSQL_USER
+        value: root
+      - key: MYSQL_PASSWORD
+        value: password
+      - key: MYSQL_DATABASE
+        value: wecare_db
+      - key: USE_KOBO
+        value: true
+      - key: KOBO_FORM_ID
+        value: aJCCRbcngUJVKntaJNxjQp
+      - key: KOBO_BASE_URL
+        value: https://kf.kobotoolbox.org/api/v2/assets
+      - key: KOBO_API_KEY
+        value: ${KOBO_API_KEY}
+      - key: KOBO_FORM_URL
+        value: https://kf.kobotoolbox.org/#/forms/f/summary
+      - key: AT_USERNAME
+        value: sandbox
+      - key: AT_API_KEY
+        value: ${AT_API_KEY}
+      - key: AT_SANDBOX
+        value: true
+      - key: AT_API_URL
+        value: https://api.africastalking.com/version1/messaging
+      - key: FLASK_SECRET_KEY
+        value: your_super_secret_key 

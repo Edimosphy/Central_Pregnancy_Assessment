@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> View Risk Assessment Graphs</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Risk Graphs</h2>
+    <div id="graphs">
+        <!-- Plotly graphs will be rendered here -->
+    </div>
+</div>
+</body>
+</html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+    // Example data for Plotly graphs
+    var data = [
+        {
+            x: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+            y: [10, 15, 13, 17],
+            type: 'scatter',
+            mode: 'lines+markers',
+            name: 'Risk Level'
+        }
+    ];
+
+    var layout = {
+        title: 'Pregnancy Risk Over Time',
+        xaxis: { title: 'Weeks' },
+        yaxis: { title: 'Risk Level' }
+    };
+
+    Plotly.newPlot('graphs', data, layout);
+</script>
+<script>    

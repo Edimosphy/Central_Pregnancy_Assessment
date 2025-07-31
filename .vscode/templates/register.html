@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Hospital</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Register New Hospital</h2>
+    <form method="POST" action="/register">
+        <input type="text" name="name" placeholder="Hospital Name" required>
+        <input type="text" name="phone" placeholder="Phone" required>
+        <input type="text" name="state" placeholder="State" required>
+        <input type="text" name="lga" placeholder="LGA" required>
+        <input type="text" name="country" placeholder="Country" required>
+        <input type="text" name="antenatal_day" placeholder="Antenatal Day (e.g., Monday)" required>
+        <input type="time" name="antenatal_time" required>
+        <input type="password" name="password" placeholder="Set Password" required>
+        <button type="submit" class="button">Register</button>
+    </form>
+</div>
+</body>
+</html>

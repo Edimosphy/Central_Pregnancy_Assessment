@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Custom Message</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Send Custom Message</h2>
+    <form method="POST" action="/custom_message">
+        <input type="text" name="phone" placeholder="Recipient's Phone" required>
+        <textarea name="message" placeholder="Enter your message" required></textarea>
+        <button type="submit" class="button">Send Message</button>
+    </form>
+</div>
+</body>
+</html>

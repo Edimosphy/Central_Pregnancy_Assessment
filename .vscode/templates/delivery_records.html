@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery Records</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Delivery Records</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Hospital Name</th>
+                <th>Phone</th>
+                <th>Delivery Date</th>
+                <th>Number of Deliveries</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.hospital_name }}</td>
+                <td>{{ record.phone }}</td>
+                <td>{{ record.delivery_date }}</td>
+                <td>{{ record.num_deliveries }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/dashboard" class="button">Back to Dashboard</a>
+</div>
+</body>
+</html>
