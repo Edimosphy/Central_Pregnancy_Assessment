@@ -11,4 +11,3 @@ plotly
 pandas
 scikit-learn
 joblib
-pickle
