@@ -1,13 +1,13 @@
-import pickle
+import joblib
 import pandas as pd
 
 def save_model(model):
     with open("maternal_risk_model.pkl", "wb") as f:
-        pickle.dump(model, f)
+        joblib.dump(model, f)
 
 def load_model():
     with open("maternal_risk_model.pkl", "rb") as f:
-        return pickle.load(f)
+        return joblib.load(f)
 
 def predict_risk(record_dict):
     model = load_model()
